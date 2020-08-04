@@ -1,0 +1,52 @@
+.expensesWrapper {
+  display: flex;
+
+  &>div {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.expensesCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.expensesCardBody {
+  padding: 15px;
+  text-align: left;
+
+  p {
+    font-size: 14px;
+    margin: 0;
+    color: #a0a0a8;
+  }
+
+  h3 {
+    position: relative;
+    color: #191a2c;
+    margin-top: 8px;
+    font-weight: 500;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 5px;
+      bottom: 50%;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.incomeTitle::before {
+  background-color: #2ec285;
+}
+
+.expenseTitle::before {
+  background-color: #f6646c;
+}

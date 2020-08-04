@@ -1,0 +1,36 @@
+.plus {
+  color: #2ec285;
+}
+
+.minus {
+  color: #f6646c;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between !important;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px 0 !important;
+
+  .deleteBtn {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    opacity: 0;
+  }
+
+  &:hover {
+    .deleteBtn {
+      opacity: 1;
+    }
+  }
+
+  &>span {
+    font-weight: 500;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
